@@ -35,8 +35,8 @@ public class DemoQaForm {
     $("#userNumber").setValue("8800555353");
     // заполняем дату рождения
     $("#dateOfBirthInput").click();
-    $(".react-datepicker__month-select").selectOption(9); // индекс
-    $(".react-datepicker__year-select").selectOption("1990"); // текст
+    $(".react-datepicker__month-select").selectOptionByValue("9");
+    $(".react-datepicker__year-select").selectOptionByValue("1990");
     $(".react-datepicker__day--014").click();
     //заполняем предмет
     $("#subjectsInput").setValue("Computer Science").pressEnter();
@@ -45,14 +45,14 @@ public class DemoQaForm {
     $(byText("Reading")).click();
     $(byText("Music")).click();
     // вставляем картинку
-    $("#uploadPicture").uploadFile(new File("C:\\Users\\Dmitriy.Golovanov\\OneDrive - NEDRA\\Рабочий стол\\key.txt"));
+    $("#uploadPicture").uploadFile(new File("src/test/resources/key.txt"));
     // заполняем текущий адрес
     $("#currentAddress").setValue("текущий адрес");
     // заполняем штат и город
     $("#state").click();
-    $("#react-select-3-option-0").click();
+    $("#react-select-3-input").setValue("NCR").pressEnter();
     $("#city").click();
-    $("#react-select-4-option-0").click();
+    $("#react-select-4-input").setValue("Delhi").pressEnter();
     // нажать submit
     $("#submit").click();
     //$(byText("Submit")).click();
