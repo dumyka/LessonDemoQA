@@ -17,41 +17,41 @@ public class RegistrationPages {
   private RegistrationResultModal registrationResultModal = new RegistrationResultModal();
   private final String TITLE_TEXT = "Practice form";
   private SelenideElement
-          firstName = $("#firstName"),
-          lastName = $("#lastName"),
-          dateOfBirthInput = $("#dateOfBirthInput");
+      firstName = $("#firstName"),
+      lastName = $("#lastName"),
+      dateOfBirthInput = $("#dateOfBirthInput");
 
-  public RegistrationPages openPages(){
+  public RegistrationPages openPages() {
     open("https://demoqa.com/automation-practice-form");
     $(".main-header").shouldHave(text(TITLE_TEXT));
     executeJavaScript("$('#fixedban').remove()");
     executeJavaScript("$('footer').remove()");
-    return  this;
+    return this;
   }
 
-  public RegistrationPages setFirstName(String value){
+  public RegistrationPages setFirstName(String value) {
     firstName.setValue(value);
-    return  this;
+    return this;
   }
 
-  public RegistrationPages setLastName(String value){
+  public RegistrationPages setLastName(String value) {
     lastName.setValue(value);
-    return  this;
+    return this;
   }
 
-  public RegistrationPages setEmail(String value){
+  public RegistrationPages setEmail(String value) {
     $("#userEmail").setValue(value);
-    return  this;
+    return this;
   }
 
-  public RegistrationPages setGender(String value){
+  public RegistrationPages setGender(String value) {
     $("#genterWrapper").$(byText(value)).click();
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages setPhone(String value){
+  public RegistrationPages setPhone(String value) {
     $("#userNumber").setValue(value);
-    return  this;
+    return this;
   }
 
   public RegistrationPages setBirthDay(String day, String month, String year) {
@@ -60,38 +60,38 @@ public class RegistrationPages {
     return this;
   }
 
-  public  RegistrationPages setObject(String value){
+  public RegistrationPages setObject(String value) {
     $("#subjectsInput").setValue(value).pressEnter();
-    return  this;
+    return this;
   }
 
-  public RegistrationPages setHobbies (String value1, String value2, String value3){
+  public RegistrationPages setHobbies(String value1, String value2, String value3) {
     $("#hobbiesWrapper").$(byText(value1)).click();
     $("#hobbiesWrapper").$(byText(value2)).click();
     $("#hobbiesWrapper").$(byText(value3)).click();
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages setUploadFile(){
+  public RegistrationPages setUploadFile() {
     $("#uploadPicture").uploadFile(file);
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages setAddress(String value){
+  public RegistrationPages setAddress(String value) {
     $("#currentAddress").setValue(value);
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages setState(String value){
+  public RegistrationPages setState(String value) {
     $("#state").click();
     $("#react-select-3-input").setValue(value).pressEnter();
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages setCity(String value){
+  public RegistrationPages setCity(String value) {
     $("#city").click();
     $("#react-select-4-input").setValue(value).pressEnter();
-    return  this;
+    return this;
   }
 
   public RegistrationPages clickSubmitButton() {
@@ -99,18 +99,18 @@ public class RegistrationPages {
     return this;
   }
 
-  public  RegistrationPages verifyResultModalAppears(){
+  public RegistrationPages verifyResultModalAppears() {
     registrationResultModal.verifyModalAppears();
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages verifyResult(String key, String value){
+  public RegistrationPages verifyResult(String key, String value) {
     registrationResultModal.verifyResult(key, value);
-    return  this;
+    return this;
   }
 
-  public  RegistrationPages closeModalResult(){
+  public RegistrationPages closeModalResult() {
     $("#closeLargeModal").click();
-    return  this;
+    return this;
   }
 }
