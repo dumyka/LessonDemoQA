@@ -113,4 +113,9 @@ public class RegistrationPages {
     $("#closeLargeModal").click();
     return this;
   }
+
+  public RegistrationPages setHobby(String value) {
+    $("#hobbiesWrapper").$(byText(value)).click();
+    return this;
+  }
 }
