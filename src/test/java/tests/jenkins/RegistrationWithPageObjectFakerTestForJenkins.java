@@ -6,13 +6,10 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
-import pages.RegistrationPages;
-import tests.pageObject.TestBase;
 
 
-public class RegistrationWithPageObjectFakerTest extends TestBase {
+public class RegistrationWithPageObjectFakerTestForJenkins extends TestBaseExtended {
   Faker faker = new Faker();
-  RegistrationPages registrationPages = new RegistrationPages();
 
   @Tag("simple")
   @DisplayName("Заполнение формы регистрации DemoQA")
