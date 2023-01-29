@@ -25,7 +25,7 @@ public class RegistrationWithPageObjectFakerTestForJenkins extends TestBaseExten
     String month = faker.options().option("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
     String year = faker.number().numberBetween(1900, 2022) + "";
     String object = faker.options().option("Hindi", "Social Studies", "Data Science");
-    String hobby = faker.options().option("Sports","Music");
+    String hobby = faker.options().option("Reading");
     String file = "key.txt";
     String address = faker.address().fullAddress();
     String state = faker.options().option("NCR", "Uttar Pradesh", "Haryana", "Rajasthan");;

@@ -117,7 +117,7 @@ public class RegistrationPages {
   }
 
   public RegistrationPages setHobby(String value) {
-    $(byText(value)).click();
+    $("#hobbiesWrapper").$(byText(value)).click();
     return this;
   }
 }
