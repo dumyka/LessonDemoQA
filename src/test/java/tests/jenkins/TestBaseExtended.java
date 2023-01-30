@@ -17,10 +17,14 @@ public class TestBaseExtended {
 
   @BeforeAll
   static void beforeAll() {
-    Configuration.browserSize = "1920x1080";
-    Configuration.browser = "chrome";
-    Configuration.browserVersion = "100.0";
-    Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+    //Configuration.browserSize = "1920x1080";
+    //Configuration.browser = "chrome";
+    //Configuration.browserVersion = "100.0";
+    //Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+    Configuration.browserSize = System.getProperty("1920x1080");
+    Configuration.browser = System.getProperty("chrome");
+    Configuration.browserVersion = System.getProperty("100.0");
+    Configuration.remote = System.getProperty("selenoid_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("selenoid:options", Map.<String, Object>of(
