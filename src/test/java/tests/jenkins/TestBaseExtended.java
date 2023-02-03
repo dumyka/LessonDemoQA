@@ -24,7 +24,7 @@ public class TestBaseExtended {
     Configuration.browserSize = System.getProperty("browserSize","1920x1080");
     Configuration.browser = System.getProperty("browser","chrome");
     Configuration.browserVersion = System.getProperty("browserVersion", "100.0");
-    Configuration.remote = System.getProperty("selenoid_url", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
+    Configuration.remote = System.getProperty("remote", "https://user1:1234@selenoid.autotests.cloud/wd/hub");
 
     DesiredCapabilities capabilities = new DesiredCapabilities();
     capabilities.setCapability("selenoid:options", Map.<String, Object>of(
@@ -37,6 +37,7 @@ public class TestBaseExtended {
 
   @BeforeEach
   void addListener(){
+
     SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
   }
 
